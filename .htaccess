@@ -1,0 +1,64 @@
+#włączenie mod_rewrite
+Options +FollowSymLinks
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^Category/?$ index.php?controller=Category [L]
+RewriteRule ^Category/editForm/(\d+)/?$ index.php?controller=Category&action=editForm&id=$1 [L]
+RewriteRule ^Category/edit/?$ index.php?controller=Category&action=update [L]
+RewriteRule ^Category/delete/(\d+)/?$ index.php?controller=Category&action=delete&id=$1 [L]
+RewriteRule ^Category/addForm/?$ index.php?controller=Category&action=addForm [L]
+RewriteRule ^Category/add/?$ index.php?controller=Category&action=add [L]
+
+RewriteRule ^Client/?$ index.php?controller=Client [L]
+RewriteRule ^Client/editForm/(\d+)/?$ index.php?controller=Client&action=editForm&id=$1 [L]
+RewriteRule ^Client/edit/?$ index.php?controller=Client&action=update [L]
+RewriteRule ^Client/delete/(\d+)/?$ index.php?controller=Client&action=delete&id=$1 [L]
+RewriteRule ^Client/addForm/?$ index.php?controller=Client&action=addForm [L]
+RewriteRule ^Client/add/?$ index.php?controller=Client&action=add [L]
+
+RewriteRule ^Halfproduct/?$ index.php?controller=Halfproduct [L]
+RewriteRule ^Halfproduct/editForm/(\d+)/?$ index.php?controller=Halfproduct&action=editForm&id=$1 [L]
+RewriteRule ^Halfproduct/edit/?$ index.php?controller=Halfproduct&action=update [L]
+RewriteRule ^Halfproduct/delete/(\d+)/?$ index.php?controller=Halfproduct&action=delete&id=$1 [L]
+RewriteRule ^Halfproduct/addForm/?$ index.php?controller=Halfproduct&action=addForm [L]
+RewriteRule ^Halfproduct/add/?$ index.php?controller=Halfproduct&action=add [L]
+
+RewriteRule ^User/?$ index.php?controller=User [L]
+RewriteRule ^User/editForm/(\d+)/?$ index.php?controller=User&action=editForm&id=$1 [L]
+RewriteRule ^User/edit/?$ index.php?controller=User&action=update [L]
+RewriteRule ^User/delete/(\d+)/?$ index.php?controller=User&action=delete&id=$1 [L]
+RewriteRule ^User/addForm/?$ index.php?controller=User&action=addForm [L]
+RewriteRule ^User/add/?$ index.php?controller=User&action=add [L]
+
+RewriteRule ^Worker/?$ index.php?controller=Worker [L]
+RewriteRule ^Worker/editForm/(\d+)/?$ index.php?controller=Worker&action=editForm&id=$1 [L]
+RewriteRule ^Worker/edit/?$ index.php?controller=Worker&action=update [L]
+RewriteRule ^Worker/delete/(\d+)/?$ index.php?controller=Worker&action=delete&id=$1 [L]
+RewriteRule ^Worker/addForm/?$ index.php?controller=Worker&action=addForm [L]
+RewriteRule ^Worker/add/?$ index.php?controller=Worker&action=add [L]
+
+RewriteRule ^Product/?$ index.php?controller=Product [L]
+RewriteRule ^Product/editForm/(\d+)/?$ index.php?controller=Product&action=editForm&id=$1 [L]
+RewriteRule ^Product/edit/?$ index.php?controller=Product&action=update [L]
+RewriteRule ^Product/delete/(\d+)/?$ index.php?controller=Product&action=delete&id=$1 [L]
+RewriteRule ^Product/addForm/?$ index.php?controller=Product&action=addForm [L]
+RewriteRule ^Product/add/?$ index.php?controller=Product&action=add [L]
+
+RewriteRule ^MealOrder/?$ index.php?controller=MealOrder [L]
+RewriteRule ^MealOrder/editForm/(\d+)/?$ index.php?controller=MealOrder&action=editForm&id=$1 [L]
+RewriteRule ^MealOrder/edit/?$ index.php?controller=MealOrder&action=update [L]
+RewriteRule ^MealOrder/delete/(\d+)/?$ index.php?controller=MealOrder&action=delete&id=$1 [L]
+RewriteRule ^MealOrder/addForm/?$ index.php?controller=MealOrder&action=addForm [L]
+RewriteRule ^MealOrder/add/?$ index.php?controller=MealOrder&action=add [L]
+
+RewriteRule ^OrderProduct/?$ index.php?controller=OrderProduct [L]
+RewriteRule ^OrderProduct/editForm/(\d+)/?$ index.php?controller=OrderProduct&action=editForm&id=$1 [L]
+RewriteRule ^OrderProduct/edit/?$ index.php?controller=OrderProduct&action=update [L]
+RewriteRule ^OrderProduct/delete/(\d+)/?$ index.php?controller=OrderProduct&action=delete&id=$1 [L]
+RewriteRule ^OrderProduct/addForm/?$ index.php?controller=OrderProduct&action=addForm [L]
+RewriteRule ^OrderProduct/add/?$ index.php?controller=OrderProduct&action=add [L]
+
+ErrorDocument 404 http://localhost/09_Smarty_MVC/errors/404.html
