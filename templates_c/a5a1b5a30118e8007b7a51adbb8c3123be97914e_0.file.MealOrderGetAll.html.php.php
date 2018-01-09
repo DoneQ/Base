@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-06 03:16:50
+/* Smarty version 3.1.30, created on 2018-01-09 02:39:28
   from "D:\xampp\htdocs\Base\templates\MealOrderGetAll.html.php" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a503192f20ac5_15611198',
+  'unifunc' => 'content_5a541d50227e91_04962297',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a5a1b5a30118e8007b7a51adbb8c3123be97914e' => 
     array (
       0 => 'D:\\xampp\\htdocs\\Base\\templates\\MealOrderGetAll.html.php',
-      1 => 1515205006,
+      1 => 1515461844,
       2 => 'file',
     ),
   ),
@@ -21,15 +21,15 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:header.html.php' => 1,
   ),
 ),false)) {
-function content_5a503192f20ac5_15611198 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a541d50227e91_04962297 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.html.php", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
 <div class="container jumbotron">
-<h1>Lista kateogrii</h1>
+<h1>Lista Danych Zamówienia</h1>
 <?php if (isset($_smarty_tpl->tpl_vars['mealorders']->value)) {
 if (count($_smarty_tpl->tpl_vars['mealorders']->value) === 0) {?>
-	<b>Brak kategorii w bazie!</b><br/><br/>
+	<b>Brak danych zamówienia w bazie!</b><br/><br/>
 <?php } else { ?>
 <!--- Contact table --->
       <div class="col-md-10">
@@ -95,7 +95,7 @@ if (isset($_smarty_tpl->tpl_vars['error']->value)) {?>
 </strong>
 <?php }?>
     <div class="col-md-2">
-      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modalAddMealOrder">Dodaj kategorie</button>
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modalAddMealOrder">Dodaj Dane Zamówienia</button>
     </div>
   </div>
 

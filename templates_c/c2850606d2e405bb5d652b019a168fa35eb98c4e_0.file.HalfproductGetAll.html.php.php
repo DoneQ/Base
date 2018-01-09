@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-06 00:42:21
+/* Smarty version 3.1.30, created on 2018-01-09 02:39:23
   from "D:\xampp\htdocs\Base\templates\HalfproductGetAll.html.php" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a500d5d340cb2_76661798',
+  'unifunc' => 'content_5a541d4b7c10e0_47278370',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c2850606d2e405bb5d652b019a168fa35eb98c4e' => 
     array (
       0 => 'D:\\xampp\\htdocs\\Base\\templates\\HalfproductGetAll.html.php',
-      1 => 1515160940,
+      1 => 1515461774,
       2 => 'file',
     ),
   ),
@@ -21,15 +21,15 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:header.html.php' => 1,
   ),
 ),false)) {
-function content_5a500d5d340cb2_76661798 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a541d4b7c10e0_47278370 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.html.php", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
 <div class="container jumbotron">
-<h1>Lista kateogrii</h1>
+<h1>Lista półproduktów</h1>
 <?php if (isset($_smarty_tpl->tpl_vars['halfproducts']->value)) {
 if (count($_smarty_tpl->tpl_vars['halfproducts']->value) === 0) {?>
-	<b>Brak kategorii w bazie!</b><br/><br/>
+	<b>Brak półproduktów w bazie!</b><br/><br/>
 <?php } else { ?>
 <!--- Contact table --->
       <div class="col-md-10">
@@ -95,7 +95,7 @@ if (isset($_smarty_tpl->tpl_vars['error']->value)) {?>
 </strong>
 <?php }?>
     <div class="col-md-2">
-      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modalAddHalfproduct">Dodaj kategorie</button>
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modalAddHalfproduct">Dodaj półprodukt</button>
     </div>
   </div>
 

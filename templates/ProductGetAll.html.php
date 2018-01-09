@@ -1,9 +1,9 @@
 {include file="header.html.php"}
 <div class="container jumbotron">
-    <h1>Lista kateogrii</h1>
+    <h1>Lista produktów</h1>
     {if isset($products)}
     {if $products|@count === 0}
-    <b>Brak kategorii w bazie!</b><br/><br/>
+    <b>Brak produktów w bazie!</b><br/><br/>
     {else}
     <!--- Contact table --->
     <div class="col-md-10">
@@ -51,7 +51,7 @@
     <strong>{$error}</strong>
     {/if}
     <div class="col-md-2">
-        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modalAddProduct">Dodaj kategorie</button>
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modalAddProduct">Dodaj produkt</button>
     </div>
 </div>
 

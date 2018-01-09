@@ -1,9 +1,9 @@
 {include file="header.html.php"}
 <div class="container jumbotron">
-<h1>Lista kateogrii</h1>
+<h1>Lista Zamówień</h1>
 {if isset($orderproducts)}
 {if $orderproducts|@count === 0}
-	<b>Brak kategorii w bazie!</b><br/><br/>
+	<b>Brak zamówień w bazie!</b><br/><br/>
 {else}
 <!--- Contact table --->
       <div class="col-md-10">
