@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Bootstrap 101 Template with MVC</title>
-
     <!-- Bootstrap -->
     <link href="http://{$smarty.server.HTTP_HOST}{$subdir}css/bootstrap.min.css" rel="stylesheet">
     
@@ -39,7 +38,71 @@
             <li><a href="http://{$smarty.server.HTTP_HOST}{$subdir}Product">Lista produktów</a></li>
             <li><a href="http://{$smarty.server.HTTP_HOST}{$subdir}User">Lista uzytkownikow</a></li>
             <li><a href="http://{$smarty.server.HTTP_HOST}{$subdir}Worker">Lista pracownikow</a></li>
+ {if !isset($login)}
+		      <li><a href="http://{$smarty.server.HTTP_HOST}{$subdir}Access/logform">Zaloguj</a></li>
+              <li><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modalAddUser">Zarejestruj sie</button></li>
+		    {else}
+		      <li><a href="http://{$smarty.server.HTTP_HOST}{$subdir}Access/logout">Wyloguj</a></li>
+		    {/if}
         </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
+
+<!-- Modal section -->
+  <div id="modalAddUser" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">
+            <translate>Add new user</translate>
+          </h4>
+        </div>
+        <div class="modal-body">
+          <form action="http://{$smarty.server.HTTP_HOST}{$subdir}User/add" method="post" id="userForm">
+            <div class="form-group">
+              <label for="login">
+                <translate>Login</translate>
+              </label>
+              <input type="text" class="form-control" name="login" required>
+            </div>
+            <div class="form-group">
+              <label for="password">
+                <translate>Password</translate>
+              </label>
+              <input type="password" class="form-control" name="password" required>
+            </div>
+            <div class="form-group">
+              <label for="clientId">
+                <translate>Client Id</translate>
+              </label>
+              <input type="text" class="form-control" name="idClient" required>
+            </div>
+            <div class="form-group">
+              <label for="workerId">
+                <translate>Worker Id</translate>
+              </label>
+              <input type="text" class="form-control" name="idWorker" required>
+            </div>
+            <div class="modal-footer">
+              <input type="submit" class="btn btn-default" value="Add"/>
+              <input type="button" class="btn btn-default" value="Close" data-dismiss="modal"/>
+              <!--
+              <button type="submit" class="btn btn-default" data-dismiss="modal">
+                <translate>Submit</translate>
+              </button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">
+                <translate>Close</translate>
+              </button>
+              -->
+            </div>
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  <!--- /.modal-collapse --->

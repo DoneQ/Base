@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-06 00:28:13
+/* Smarty version 3.1.30, created on 2018-01-09 01:58:13
   from "D:\xampp\htdocs\Base\templates\ClientGetAll.html.php" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a500a0d8be001_23974441',
+  'unifunc' => 'content_5a5413a51a79e1_52468074',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2d25b0ab79e001a7fa0332bd7bc3783919ef9b0c' => 
     array (
       0 => 'D:\\xampp\\htdocs\\Base\\templates\\ClientGetAll.html.php',
-      1 => 1515161236,
+      1 => 1515459491,
       2 => 'file',
     ),
   ),
@@ -21,15 +21,15 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:header.html.php' => 1,
   ),
 ),false)) {
-function content_5a500a0d8be001_23974441 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a5413a51a79e1_52468074 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.html.php", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
 <div class="container jumbotron">
-<h1>Lista kateogrii</h1>
+<h1>Lista klientów</h1>
 <?php if (isset($_smarty_tpl->tpl_vars['clients']->value)) {
 if (count($_smarty_tpl->tpl_vars['clients']->value) === 0) {?>
-	<b>Brak kategorii w bazie!</b><br/><br/>
+	<b>Brak klientów w bazie!</b><br/><br/>
 <?php } else { ?>
 <!--- Contact table --->
       <div class="col-md-10">
@@ -95,7 +95,7 @@ if (isset($_smarty_tpl->tpl_vars['error']->value)) {?>
 </strong>
 <?php }?>
     <div class="col-md-2">
-      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modalAddClient">Dodaj kategorie</button>
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modalAddClient">Dodaj klienta</button>
     </div>
   </div>
 

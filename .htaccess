@@ -61,4 +61,8 @@ RewriteRule ^OrderProduct/delete/(\d+)/?$ index.php?controller=OrderProduct&acti
 RewriteRule ^OrderProduct/addForm/?$ index.php?controller=OrderProduct&action=addForm [L]
 RewriteRule ^OrderProduct/add/?$ index.php?controller=OrderProduct&action=add [L]
 
+RewriteRule ^Access/logform/?$ index.php?controller=Access&action=logform [L]
+RewriteRule ^Access/login/?$ index.php?controller=Access&action=login [L]
+RewriteRule ^Access/logout/?$ index.php?controller=Access&action=logout [L]
+
 ErrorDocument 404 http://localhost/09_Smarty_MVC/errors/404.html
