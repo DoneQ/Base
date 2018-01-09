@@ -45,7 +45,7 @@ class Worker extends Controller {
         $view->editform($data['workers'][0]);   
     }
     public function update(){
-        $model=$this->getModel('workers');
+        $model=$this->getModel('Worker');
         $data = $model->update($_POST['id'], $_POST['name'], $_POST['sname'], $_POST['phone'], $_POST['mail']);
         if(isset($data['error']))
             \Tools\Session::set('error', $data['error']);
